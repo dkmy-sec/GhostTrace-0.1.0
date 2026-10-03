@@ -1,0 +1,19 @@
+GHOSTTRACE 0.1.0
+
+1. Extract the ZIP completely.
+2. Install Python 3.10+ if you don't have it.
+3. Double-click start_ghosttrace.bat. Keep its window running.
+4. Chrome: chrome://extensions | Edge: edge://extensions
+   Enable Developer mode > Load unpacked > choose the extension folder.
+5. In the dashboard, choose Pair extension and copy the key.
+   Paste it into the GhostTrace toolbar popup > Save & connect.
+6. Browse. Click graph nodes or map markers to inspect the evidence.
+
+You can try the standalone GhostTrace_demo.html without installing anything.
+Its requests are simulated; live browsing requires the collector + extension.
+
+Full instructions and limits: README.md
+Source attribution and data licenses: THIRD_PARTY_NOTICES.md
+
+Records stay local. Country markers are estimates, not exact server pins.
+Broker affiliation is not proof that a request sold your information.

@@ -1,0 +1,50 @@
+# Private browsing history, settings, pairing keys, and local backups
+local-data/
+local-data-*/
+pairing-key.txt
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+*.db-wal
+*.db-shm
+
+# Captures and GhostTrace observation exports
+*.har
+*.pcap
+*.pcapng
+GhostTrace_connections*.csv
+ghosttrace_connections*.csv
+exports/
+captures/
+
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python caches, environments, and development output
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+node_modules/
+*.log
+
+# Editor / OS files and packaged releases
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+/dist/
+*.zip
+
+# Keep data/, vendor/, and extension/tracker-rules.js: public app dependencies.

@@ -1,0 +1,18 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+const C = require('../extension/classifier.js');
+const sandbox={self:{}};
+vm.runInNewContext(fs.readFileSync(require('node:path').join(__dirname,'../extension/tracker-rules.js'),'utf8'),sandbox);
+const data=sandbox.self.GHOSTTRACE_RULES;
+assert.equal(C.normalize('https://USER:SECRET@Sub.Example.COM/path?secret=1'),'sub.example.com');
+assert.equal(C.entryFor('sub.google-analytics.com',data).domain,'google-analytics.com');
+const login=C.inspect('https://accounts.google.com/InteractiveLogin','news.example','sub_frame',data);
+assert.equal(data.trackers['google.com'].rules[login.rule_index].action,'ignore');
+const pixel=C.inspect('https://google.com/pagead/conversion?gclid=DO_NOT_STORE','news.example','image',data);
+assert.ok(pixel.rule_index!==null);
+assert.deepEqual(pixel.identifier_params,['gclid']);
+assert.ok(!JSON.stringify(pixel).includes('DO_NOT_STORE'));
+const exception=C.inspect('https://google-analytics.com/analytics.js','raspberrypi.org','script',data);
+assert.equal(exception.rule_exception,true);
+console.log('Passed: URL sanitization, mixed-service exclusions, tracker patterns, identifier privacy, and resource exceptions.');

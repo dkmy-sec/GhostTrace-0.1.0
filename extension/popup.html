@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GhostTrace</title><link rel="stylesheet" href="popup.css"></head>
+<body><header><span class="ghost">◉</span><div><h1>GhostTrace</h1><p>Your browsing, made visible.</p></div></header>
+<div id="status" role="status">Checking collector…</div>
+<form id="form"><label>Pairing key<input id="key" type="password" autocomplete="off" placeholder="Paste from Pair extension"></label>
+<label>Local collector port<input id="port" type="number" min="1024" max="65535" value="8765"></label>
+<label class="check"><input id="enabled" type="checkbox" checked> Record browsing metadata</label>
+<label>Exclude sites<textarea id="excluded" placeholder="bank.example, mail.example" rows="2"></textarea><small>Excluded sites and their subdomains are skipped.</small></label>
+<button type="submit">Save & connect</button></form>
+<div class="actions"><button id="dashboard" class="secondary">Open dashboard</button><button id="discard" class="secondary">Discard queue</button></div>
+<p id="message" role="status"></p><footer>Local collector only. No page contents, passwords, cookie values, or query values are saved. Private windows are excluded.</footer>
+<script src="popup.js"></script></body></html>

@@ -1,0 +1,22 @@
+{
+  "downloaded": "2026-10-01",
+  "tracker_domains": 1028,
+  "broker_registry_entries": 603,
+  "broker_registry_updated": "2026-07-29",
+  "dbip_release": "2026-10",
+  "sources": {
+    "trackers": "https://staticcdn.duckduckgo.com/trackerblocking/v2.1/tds.json",
+    "brokers": "https://cppa.ca.gov/data_broker_registry/registry.csv",
+    "geo": "https://db-ip.com/db/lite.php",
+    "map": "https://www.naturalearthdata.com/",
+    "suffixes": "https://publicsuffix.org/"
+  },
+  "sha256": {
+    "dbip-asn-lite.mmdb": "4384bfcfb594391bc4e0ab37751f44661eaf7cadbeee28a90a6b82dc935fec4c",
+    "broker-registry.csv": "cf6c85709c223f2bf1608f8316d926dfb3f0a6d8e8afc6608cbdf88eec9fc58d",
+    "public_suffix_list.dat": "257b298daca42f6d8ec964e238c2a55518e14f09d3117917ec8acee6f188503e",
+    "tracker-radar.json": "db69df6745c375562dff0c946d8774ca5063c149a26c603220e33fc097b38b48",
+    "country-centers.json": "456bfcd1af7708aea21726f5363821cb19b7603ad439c5a4940afdc2ec60795c",
+    "dbip-country-lite.mmdb": "dbd70ccfa2a13627eaf4913d19920a1a229f1b3c5439ac01c509995b6364202a"
+  }
+}
